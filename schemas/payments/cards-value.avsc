@@ -1,0 +1,57 @@
+{
+  "type": "record",
+  "name": "Card",
+  "namespace": "com.bootcamp.payments",
+  "fields": [
+    {
+      "name": "card_id",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      },
+      "confluent:tags": [
+        "PCI"
+      ]
+    },
+    {
+      "name": "account_id",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "card_type",
+      "type": "string"
+    },
+    {
+      "name": "brand",
+      "type": "string"
+    },
+    {
+      "name": "last4",
+      "type": "string",
+      "confluent:tags": [
+        "PCI"
+      ]
+    },
+    {
+      "name": "status",
+      "type": "string"
+    },
+    {
+      "name": "issued_at",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    },
+    {
+      "name": "expires_at",
+      "type": {
+        "type": "int",
+        "logicalType": "date"
+      }
+    }
+  ]
+}

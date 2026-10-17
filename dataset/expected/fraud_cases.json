@@ -1,0 +1,220 @@
+{
+  "rule": {
+    "rule_id": "RULE_VELOCITY",
+    "definition": "3 ou mais transações do mesmo card_id dentro de 60 segundos"
+  },
+  "positive_cases": [
+    {
+      "case_id": "RULE_VELOCITY_POS_01",
+      "expected_alert": true,
+      "rule_id": "RULE_VELOCITY",
+      "card_id": "0235c868-1452-5a89-96eb-b2b576960bbb",
+      "account_id": "cc524231-8050-53ff-902a-344c911143f5",
+      "transaction_ids": [
+        "225e7d87-b1ba-50fb-b34c-be6b9d942898",
+        "486ffbd4-4f9c-5637-9cf1-10b612ac3772",
+        "1007783c-d271-534f-9a47-f18eb94814e7"
+      ],
+      "window_seconds": 42,
+      "reason": "3 transações do mesmo card_id em menos de 60 segundos"
+    },
+    {
+      "case_id": "RULE_VELOCITY_POS_02",
+      "expected_alert": true,
+      "rule_id": "RULE_VELOCITY",
+      "card_id": "4951b86d-815a-53b0-8e8b-fd8aaab83a63",
+      "account_id": "cc524231-8050-53ff-902a-344c911143f5",
+      "transaction_ids": [
+        "01a8812a-4521-5963-82b2-470298dbf6c5",
+        "cc4e9240-aea6-521d-b552-bb22f5296bf9",
+        "c6f58823-aacf-54e1-ab2c-35ae816e38c6"
+      ],
+      "window_seconds": 42,
+      "reason": "3 transações do mesmo card_id em menos de 60 segundos"
+    },
+    {
+      "case_id": "RULE_VELOCITY_POS_03",
+      "expected_alert": true,
+      "rule_id": "RULE_VELOCITY",
+      "card_id": "99908f58-6dc4-5b01-b7d0-310f89ea9468",
+      "account_id": "aec3c94b-4664-5e85-8a10-c076c32e4c15",
+      "transaction_ids": [
+        "5581531f-4e71-5528-b42c-717bbcaa3ec9",
+        "2a9e1054-913f-5a81-a803-fc6042776c71",
+        "f69bd62a-008d-50e3-ad92-4393d87542f8"
+      ],
+      "window_seconds": 42,
+      "reason": "3 transações do mesmo card_id em menos de 60 segundos"
+    },
+    {
+      "case_id": "RULE_VELOCITY_POS_04",
+      "expected_alert": true,
+      "rule_id": "RULE_VELOCITY",
+      "card_id": "f5ca40f3-73dd-5a0c-aa17-1128ae219a09",
+      "account_id": "aec3c94b-4664-5e85-8a10-c076c32e4c15",
+      "transaction_ids": [
+        "4450abc7-a72a-50fb-be3a-f85dc55be7ad",
+        "a89214e0-63df-596b-af10-4cbf6be3ad4f",
+        "0d98fff7-d336-5f20-a24d-38d64e7f12b1"
+      ],
+      "window_seconds": 42,
+      "reason": "3 transações do mesmo card_id em menos de 60 segundos"
+    },
+    {
+      "case_id": "RULE_VELOCITY_POS_05",
+      "expected_alert": true,
+      "rule_id": "RULE_VELOCITY",
+      "card_id": "3903455d-12e7-59c7-bdb7-441b4f0a6bff",
+      "account_id": "ecdda11b-9329-5033-bb1b-cf95f102650b",
+      "transaction_ids": [
+        "30ae7210-35cd-50cb-a227-ce631b5b7b7e",
+        "b07d6ff2-c487-557d-9a22-95ea477347e0",
+        "2ff51ce4-6821-5313-a61d-a8bae0712cba"
+      ],
+      "window_seconds": 42,
+      "reason": "3 transações do mesmo card_id em menos de 60 segundos"
+    },
+    {
+      "case_id": "RULE_VELOCITY_POS_06",
+      "expected_alert": true,
+      "rule_id": "RULE_VELOCITY",
+      "card_id": "87aadca6-0670-551d-84a7-cb97c6c90004",
+      "account_id": "ecdda11b-9329-5033-bb1b-cf95f102650b",
+      "transaction_ids": [
+        "b7a4d442-6862-5ebe-962a-ab478126b8a1",
+        "bfd0ae49-6aed-51b9-8027-f09921470dab",
+        "a4c1f027-82a3-5934-9f1a-3fdd54e9909e"
+      ],
+      "window_seconds": 42,
+      "reason": "3 transações do mesmo card_id em menos de 60 segundos"
+    },
+    {
+      "case_id": "RULE_VELOCITY_POS_07",
+      "expected_alert": true,
+      "rule_id": "RULE_VELOCITY",
+      "card_id": "80c7c86b-7f22-5a3d-99a0-ad9276260856",
+      "account_id": "43ce3dc8-5a8d-585a-b15e-4fcd7b2751f3",
+      "transaction_ids": [
+        "c81a358c-4224-5783-ac2b-6940ea4b8b6b",
+        "2f01186e-468f-501e-b949-0ae7e3919bf3",
+        "d39578a0-c0cc-50df-9f92-9617fae0b0de"
+      ],
+      "window_seconds": 42,
+      "reason": "3 transações do mesmo card_id em menos de 60 segundos"
+    },
+    {
+      "case_id": "RULE_VELOCITY_POS_08",
+      "expected_alert": true,
+      "rule_id": "RULE_VELOCITY",
+      "card_id": "2ee914ab-67c6-5c90-9b96-dfa4f6eb4b6a",
+      "account_id": "43ce3dc8-5a8d-585a-b15e-4fcd7b2751f3",
+      "transaction_ids": [
+        "c7ac6794-9d75-5498-addd-af2a8f6f15f4",
+        "153e68d0-8d6b-5338-8e07-827baa7454c1",
+        "0730c45c-386b-53ce-858f-d632db49fcaa"
+      ],
+      "window_seconds": 42,
+      "reason": "3 transações do mesmo card_id em menos de 60 segundos"
+    },
+    {
+      "case_id": "RULE_VELOCITY_POS_09",
+      "expected_alert": true,
+      "rule_id": "RULE_VELOCITY",
+      "card_id": "7b21f1dd-67ec-5a5c-ac77-f7b03ed0b78d",
+      "account_id": "e9e241d8-ccbe-5df6-8a99-9f9b5a2c731e",
+      "transaction_ids": [
+        "93660a54-eb59-5bab-a392-ffa909fb3e62",
+        "2181a908-cac9-519b-9ca0-0a5e9036d030",
+        "e52f5308-fb49-5f46-9bc0-f98472f77efb"
+      ],
+      "window_seconds": 42,
+      "reason": "3 transações do mesmo card_id em menos de 60 segundos"
+    },
+    {
+      "case_id": "RULE_VELOCITY_POS_10",
+      "expected_alert": true,
+      "rule_id": "RULE_VELOCITY",
+      "card_id": "8a4336d8-42b0-5661-90e6-6c057c27ccd2",
+      "account_id": "e9e241d8-ccbe-5df6-8a99-9f9b5a2c731e",
+      "transaction_ids": [
+        "55baef2a-e10c-5206-ba77-76919304ece5",
+        "2e4d018b-6842-52ce-a6a3-20ac671d3010",
+        "fd3206f5-09a0-5d7d-87fe-2705a8ff25af"
+      ],
+      "window_seconds": 42,
+      "reason": "3 transações do mesmo card_id em menos de 60 segundos"
+    }
+  ],
+  "negative_boundary_cases": [
+    {
+      "case_id": "RULE_VELOCITY_NEG_01",
+      "expected_alert": false,
+      "rule_id": "RULE_VELOCITY",
+      "card_id": "a726475d-3bf8-5e1c-9bff-fbd856ee4d2b",
+      "account_id": "5122afbf-af3f-5432-a98a-8e1ab0edab27",
+      "transaction_ids": [
+        "74f53f6e-b91e-51c0-8011-09185af092bf",
+        "f1dad2aa-4220-5f8c-b242-fb38a1aa28e7",
+        "689564ad-71ac-56fc-8921-94233bd738af"
+      ],
+      "window_seconds": 68,
+      "reason": "3ª transação ocorre após a janela de 60 segundos"
+    },
+    {
+      "case_id": "RULE_VELOCITY_NEG_02",
+      "expected_alert": false,
+      "rule_id": "RULE_VELOCITY",
+      "card_id": "61a1e4d5-b60e-5b9c-9baf-c56a3222c63e",
+      "account_id": "5122afbf-af3f-5432-a98a-8e1ab0edab27",
+      "transaction_ids": [
+        "5e49f6bf-490e-5497-b70a-382d73ca70ea",
+        "e8cdd892-9dc4-5913-b010-e986dcb02360",
+        "4e69ad50-8442-5e99-898f-40b31190c56d"
+      ],
+      "window_seconds": 68,
+      "reason": "3ª transação ocorre após a janela de 60 segundos"
+    },
+    {
+      "case_id": "RULE_VELOCITY_NEG_03",
+      "expected_alert": false,
+      "rule_id": "RULE_VELOCITY",
+      "card_id": "4eb82f94-fb03-5c5f-8e0e-28e5cb80ed3c",
+      "account_id": "8b948f22-9b0b-519a-a668-de4c0f79c10d",
+      "transaction_ids": [
+        "a941062a-7abd-53ed-9445-1b5b82136c99",
+        "b0d24c65-7695-5e17-ae3f-f6a055877bcd",
+        "dd09c0c9-455f-5500-a01f-3a07d1177bc0"
+      ],
+      "window_seconds": 68,
+      "reason": "3ª transação ocorre após a janela de 60 segundos"
+    },
+    {
+      "case_id": "RULE_VELOCITY_NEG_04",
+      "expected_alert": false,
+      "rule_id": "RULE_VELOCITY",
+      "card_id": "ff295f38-d3c6-5e6d-ade6-27da8e91c3a3",
+      "account_id": "8b948f22-9b0b-519a-a668-de4c0f79c10d",
+      "transaction_ids": [
+        "a70166f2-b556-5a94-a8bd-a7c97c2e3b72",
+        "8b06f5c4-f5f3-531b-93db-21b828198ab4",
+        "1d5c22ad-fc4b-5023-bb68-e0fbeddb99e5"
+      ],
+      "window_seconds": 68,
+      "reason": "3ª transação ocorre após a janela de 60 segundos"
+    },
+    {
+      "case_id": "RULE_VELOCITY_NEG_05",
+      "expected_alert": false,
+      "rule_id": "RULE_VELOCITY",
+      "card_id": "2a9baa49-eb82-5cf4-8d92-d375d490465d",
+      "account_id": "b018c0c3-dee8-5098-a1b2-797077cd90cb",
+      "transaction_ids": [
+        "4053dbd8-165a-559f-911c-83ff1743b7fb",
+        "7faf70be-6867-50e1-9d69-3cb9df3d86d6",
+        "d1b2231d-1db5-505a-9796-939d2940583e"
+      ],
+      "window_seconds": 68,
+      "reason": "3ª transação ocorre após a janela de 60 segundos"
+    }
+  ]
+}
