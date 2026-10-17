@@ -1,0 +1,42 @@
+{
+  "purpose": "Mapa versionado para aplicar e comprovar tags reais no Schema Registry durante a implementação.",
+  "important": [
+    "Os metadados confluent:tags nos .avsc expressam a classificação desejada no contrato versionado.",
+    "A evidência final deve vir do Schema Registry real após registro pelo pipeline/connector.",
+    "Não considerar o arquivo local, sozinho, como prova de que a tag está ativa no Schema Registry."
+  ],
+  "classifications": {
+    "PII": {
+      "description": "Dados pessoais sintéticos usados para demonstrar governança/LGPD.",
+      "fields": [
+        "com.bootcamp.payments.Customer.full_name",
+        "com.bootcamp.payments.Customer.email",
+        "com.bootcamp.payments.Customer.phone"
+      ]
+    },
+    "PCI": {
+      "description": "Identificadores/representação de cartão. PAN completo, CVV e PIN não existem no dataset.",
+      "fields": [
+        "com.bootcamp.payments.Card.card_id",
+        "com.bootcamp.payments.Card.last4",
+        "com.bootcamp.payments.Transaction.card_id"
+      ]
+    },
+    "FIN": {
+      "description": "Dados financeiros/operacionais do domínio de pagamentos.",
+      "fields": [
+        "com.bootcamp.payments.Account.agency",
+        "com.bootcamp.payments.Account.account_number",
+        "com.bootcamp.payments.Transaction.account_id",
+        "com.bootcamp.payments.Transaction.amount"
+      ]
+    }
+  },
+  "required_runtime_evidence": [
+    "subject e versão efetivamente registrados no Schema Registry",
+    "compatibilidade BACKWARD configurada",
+    "tags PII/PCI/FIN visíveis nos campos classificados",
+    "output ou captura real do Schema Registry comprovando as tags",
+    "ausência de PAN completo, CVV e PIN nos contratos/datasets"
+  ]
+}

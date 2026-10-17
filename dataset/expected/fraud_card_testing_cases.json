@@ -1,0 +1,70 @@
+{
+  "rule": {
+    "rule_id": "RULE_CARD_TESTING",
+    "definition": "3 ou mais transações do mesmo card_id, cada uma com amount <= 20.00, dentro de 10 segundos"
+  },
+  "notes": [
+    "Os casos são inseridos por dataset/neon/fraud-test.sql e não alteram os 2.000 registros do dataset base.",
+    "O caso positivo também satisfaz RULE_VELOCITY por definição (3 transações em 10 segundos também estão dentro de 60 segundos); essa sobreposição é esperada e deve ser considerada na validação."
+  ],
+  "positive_cases": [
+    {
+      "case_id": "RULE_CARD_TESTING_POS_01",
+      "expected_alert": true,
+      "rule_id": "RULE_CARD_TESTING",
+      "card_id": "27772a4e-27a2-5502-852d-1fb1b608a060",
+      "account_id": "c942c9c7-5a50-54c6-82bf-ec0b6adc2f88",
+      "transaction_ids": [
+        "8ed913b2-3758-51d8-8340-4426d3170f3e",
+        "94963bb7-77fa-5891-ae58-a9cc77b1cb87",
+        "06d26530-5f57-5d6e-bfe8-c8324161e059"
+      ],
+      "amounts": [
+        "5.00",
+        "9.90",
+        "15.00"
+      ],
+      "window_seconds": 8
+    }
+  ],
+  "negative_boundary_cases": [
+    {
+      "case_id": "RULE_CARD_TESTING_NEG_TIME_01",
+      "expected_alert": false,
+      "rule_id": "RULE_CARD_TESTING",
+      "card_id": "27772a4e-27a2-5502-852d-1fb1b608a060",
+      "account_id": "c942c9c7-5a50-54c6-82bf-ec0b6adc2f88",
+      "transaction_ids": [
+        "86cb95f4-f658-5536-ae10-307f055c4ee3",
+        "46bf3572-20d9-51cf-942f-c7f4c2b747a2",
+        "d550ddeb-a834-5ab4-b867-5d80830507ea"
+      ],
+      "amounts": [
+        "5.00",
+        "9.90",
+        "15.00"
+      ],
+      "window_seconds": 12,
+      "reason": "3ª transação ocorre após a janela de 10 segundos"
+    },
+    {
+      "case_id": "RULE_CARD_TESTING_NEG_AMOUNT_01",
+      "expected_alert": false,
+      "rule_id": "RULE_CARD_TESTING",
+      "card_id": "27772a4e-27a2-5502-852d-1fb1b608a060",
+      "account_id": "c942c9c7-5a50-54c6-82bf-ec0b6adc2f88",
+      "transaction_ids": [
+        "93855a92-969d-5ed0-851a-8e26a740e1be",
+        "c3f380df-b23c-5181-a110-334ada24db0d",
+        "d0c028a0-32d2-53ad-b7c6-2a2b093a2700"
+      ],
+      "amounts": [
+        "5.00",
+        "25.00",
+        "15.00"
+      ],
+      "window_seconds": 8,
+      "reason": "uma das transações excede amount <= 20.00"
+    }
+  ]
+}

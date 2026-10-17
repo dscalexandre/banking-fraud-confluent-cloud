@@ -1,0 +1,57 @@
+{
+  "type": "record",
+  "name": "Customer",
+  "namespace": "com.bootcamp.payments",
+  "fields": [
+    {
+      "name": "customer_id",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "full_name",
+      "type": "string",
+      "confluent:tags": [
+        "PII"
+      ]
+    },
+    {
+      "name": "email",
+      "type": "string",
+      "confluent:tags": [
+        "PII"
+      ]
+    },
+    {
+      "name": "phone",
+      "type": "string",
+      "confluent:tags": [
+        "PII"
+      ]
+    },
+    {
+      "name": "city",
+      "type": "string"
+    },
+    {
+      "name": "state",
+      "type": "string"
+    },
+    {
+      "name": "created_at",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    },
+    {
+      "name": "updated_at",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    }
+  ]
+}

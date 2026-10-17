@@ -1,0 +1,57 @@
+{
+  "type": "record",
+  "name": "Account",
+  "namespace": "com.bootcamp.payments",
+  "fields": [
+    {
+      "name": "account_id",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "customer_id",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "agency",
+      "type": "string",
+      "confluent:tags": [
+        "FIN"
+      ]
+    },
+    {
+      "name": "account_number",
+      "type": "string",
+      "confluent:tags": [
+        "FIN"
+      ]
+    },
+    {
+      "name": "account_type",
+      "type": "string"
+    },
+    {
+      "name": "status",
+      "type": "string"
+    },
+    {
+      "name": "opened_at",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    },
+    {
+      "name": "updated_at",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    }
+  ]
+}
