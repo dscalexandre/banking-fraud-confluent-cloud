@@ -1,0 +1,20 @@
+[project]
+name = "banking-fraud-confluent-cloud"
+version = "0.1.0"
+description = "Pipeline reproduzível de detecção de fraude bancária em tempo real com PostgreSQL/Neon e Confluent Cloud."
+readme = "README.md"
+authors = [
+  { name = "Alexandre Rodrigues" }
+]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "confluent-kafka>=2.8,<3.0",
+  "psycopg[binary]>=3.2,<4.0",
+]
+
+[tool.poetry]
+package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
