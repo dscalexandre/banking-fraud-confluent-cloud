@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ferramentas de qualidade e testes
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+coverage.xml
+htmlcov/
+
+# Ambientes virtuais
+.venv/
+venv/
+
+# Variáveis de ambiente e segredos locais
+.env
+.env.*
+!.env.example
+
+# IDEs e editores
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs e saídas locais não versionáveis
+*.log
+
+# Sistema operacional
+.DS_Store
+Desktop.ini
+Thumbs.db
+.Trash-*
+
+# Arquivos temporários
+*.tmp
+*.temp
+*~
+
+# Material local usado para instalar o projeto
+.install/
+
+# Artefatos de automação definidos na estrutura do projeto são versionados
+!.agents/
+!.codex/
