@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Poetry
+.venv/
+
+# Ambiente local
+.env
+.env.*
+
+# Arquivo versionado
+!.env.example
